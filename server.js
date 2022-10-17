@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const { fileURLToPath } = require("url");
 
 const PORT = process.env.PORT || 8000;
 
