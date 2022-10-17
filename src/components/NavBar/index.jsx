@@ -17,7 +17,7 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const [searchName, setSearchName] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(false);
-  const avatar = currentUser.avatar != undefined ? `${API_URL + currentUser.avatar}` : avatarIcon;
+  // const avatar = currentUser.avatar ? `${API_URL + currentUser.avatar}` : avatarIcon;
 
   const searchChangeHandler = (e) => {
     setSearchName(e.target.value);
@@ -73,7 +73,7 @@ const NavBar = () => {
           )}
           {isAuth && (
             <Link to={"/profile"}>
-              <img className={styles.navbar__avatar} src={avatar} alt={"Avatar"} />
+              <img className={styles.navbar__avatar} src={avatarIcon} alt={"Avatar"} />
             </Link>
           )}
         </div>
