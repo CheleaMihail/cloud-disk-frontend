@@ -1,7 +1,10 @@
 import express from "express";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const PORT = env.process.PORT || 8000;
+const PORT = process.env.PORT || 8000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.static(__dirname));
