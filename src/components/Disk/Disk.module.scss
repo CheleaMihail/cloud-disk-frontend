@@ -1,0 +1,73 @@
+@import "../../utils/colors.scss";
+
+.disk {
+  margin-top: 20px;
+  height: 100%;
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__navigation,
+  &__view {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__plate,
+  &__list {
+    height: 20px;
+    width: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: no-repeat center center;
+    background-size: contain;
+  }
+
+  &__plate {
+    background-image: url("../../assets/img/Plate.svg");
+  }
+
+  &__list {
+    background-image: url("../../assets/img/List.svg");
+  }
+}
+
+.upload {
+  &__label {
+    border: 2px dashed $font-color;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  &__input {
+    display: none;
+  }
+}
+
+.visibleModal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropArea {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - (50px + 40px));
+  margin: 20px;
+  border: 2px dashed $font-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 50px);
+}

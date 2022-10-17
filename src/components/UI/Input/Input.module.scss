@@ -1,0 +1,11 @@
+@import "../../../utils/colors.scss";
+
+.input {
+  border: none;
+  border-bottom: 3px solid $font-color;
+  font-size: 16px;
+  &:focus {
+    outline: none;
+    scale: 1.01;
+  }
+}

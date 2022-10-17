@@ -1,0 +1,67 @@
+@import "../../utils/colors";
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+
+  &__leftBlock {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__search {
+    width: 200px;
+    border: 0;
+    outline: none;
+    border-bottom: $font-color 2px solid;
+  }
+
+  &__authButtons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__logo {
+    animation: rotate 5s infinite linear;
+  }
+
+  &__exit {
+    cursor: pointer;
+  }
+
+  &__header {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.container {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

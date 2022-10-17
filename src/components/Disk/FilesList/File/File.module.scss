@@ -1,0 +1,131 @@
+@import "../../../../utils/colors.scss";
+
+.file {
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+  margin-top: 10px;
+  border: 2px solid $font-color;
+  border-radius: 5px;
+  padding: 5px 0;
+  cursor: pointer;
+
+  &__img {
+    justify-self: center;
+    height: 36px;
+  }
+
+  &__name {
+    grid-column-start: 2;
+  }
+
+  &__date {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+
+  &__size {
+    grid-column-start: 6;
+    justify-self: center;
+  }
+
+  &__btn {
+    display: none;
+    width: 50px;
+    height: 35px;
+    border: 1px solid $font-color;
+    border-radius: 20px;
+  }
+
+  &:hover {
+    background: lighten($color: $font-color, $amount: 40);
+  }
+
+  &:hover &__date {
+    grid-column-start: 3;
+  }
+
+  &:hover &__size {
+    grid-column-start: 4;
+  }
+
+  &:hover &__download {
+    display: block;
+    grid-column-start: 5;
+    justify-self: center;
+    background: white url("../../../../assets/img/download.svg") center no-repeat;
+  }
+
+  &:hover &__remove {
+    display: block;
+    grid-column-start: 6;
+    justify-self: center;
+    background: white url("../../../../assets/img/remove.svg") center no-repeat;
+  }
+}
+
+.file_plate {
+  position: relative;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &__img {
+    width: 100%;
+    height: 100px;
+  }
+
+  &__expander {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #fff url("../../../../assets/img/ThreePoints.svg") no-repeat center center;
+    background-size: contain;
+    width: 25px;
+    height: 15px;
+    border: 0;
+    border-radius: 3px;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  &__contextMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    right: -125px;
+    width: 150px;
+    height: 200px;
+    padding: 10px;
+    cursor: context-menu;
+    z-index: 10;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+
+    img {
+      width: 20px;
+    }
+
+    &:hover {
+      background: $background-color;
+      border-radius: 0;
+    }
+  }
+}

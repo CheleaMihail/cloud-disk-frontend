@@ -1,0 +1,50 @@
+@import "../../utils/colors.scss";
+
+.registration {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  margin-top: 50px;
+  align-self: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+
+  &__header {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: $font-color;
+    margin-bottom: 20px;
+  }
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    border: none;
+    border-radius: 5px;
+    background-color: $font-color;
+    margin-top: 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken($color: $font-color, $amount: 15);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
