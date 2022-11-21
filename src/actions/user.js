@@ -19,7 +19,6 @@ export const autentification = (email, password) => {
         email,
         password,
       });
-
       dispatch(setUser(response.data.user));
       localStorage.setItem("token", response.data.token);
     } catch (error) {
@@ -35,8 +34,12 @@ export const auth = () => {
       const response = await axios.get(`${API_URL}api/auth/auth`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
+      
+     if(response.data.user){
       dispatch(setUser(response.data.user));
       localStorage.setItem("token", response.data.token);
+     }
+
     } catch (error) {
       console.log(error);
       localStorage.removeItem("token");
